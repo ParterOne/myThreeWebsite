@@ -39,7 +39,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 0.6;
 const rgbeLoader = new RGBELoader();
-const hdriUrl = '/studio_small_02_2k.hdr';
+const hdriUrl = 'hdr/studio_small_02_2k.hdr';
 rgbeLoader.load( hdriUrl, function ( texture ) {
   texture.mapping = THREE.EquirectangularReflectionMapping;
   //scene.background = texture;
@@ -54,7 +54,7 @@ const loader = new GLTFLoader();
 let gltf;
 let mixer;
 
-loader.load( '/BusinessCard.gltf', function ( _gltf ) {
+loader.load( 'gltf/BusinessCard.gltf', function ( _gltf ) {
   
     gltf = _gltf;
     gltf.scene.scale.set(3,3,3);

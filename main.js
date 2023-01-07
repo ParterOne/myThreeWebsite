@@ -37,7 +37,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 0.6;
 const rgbeLoader = new RGBELoader();
-const hdriUrl = '/studio_small_02_2k.hdr';
+const hdriUrl = 'hdr/studio_small_02_2k.hdr';
 rgbeLoader.load( hdriUrl, function ( texture ) {
   texture.mapping = THREE.EquirectangularReflectionMapping;
   //scene.background = texture;
@@ -51,7 +51,7 @@ const loader = new GLTFLoader();
 
 let gltf;
 
-loader.load( '/FaceV6.gltf', function ( _gltf ) {
+loader.load( 'gltf/FaceV6.gltf', function ( _gltf ) {
   
   gltf = _gltf;
 
